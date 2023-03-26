@@ -12,7 +12,7 @@ All datasets released under the Creative Commons Attribution-ShareAlike 4.0 Inte
 
 ### Description
 
-This dataset contains a list of labeled utterances that fall into three categories: COMMAND, QUESTION, and SENTENCE. 
+This dataset contains 1187 labeled utterances that fall into three categories: COMMAND, QUESTION, and SENTENCE. 
 Each label has sub-labels that describe the type of utterance, such as ACTION, DENIAL, QUERY, and REQUEST. 
 
 The purpose of this dataset is to provide labeled examples of various types of commands, questions, and sentences that can be used for training natural language processing (NLP) models.
