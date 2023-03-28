@@ -84,7 +84,7 @@ SENTENCE:STATEMENT,The sun rises in the east and sets in the west
 
 ### Description
 
-This is a dataset for coreference resolution consisting of 123 sentences in CoNNL format. 
+This is a dataset for coreference resolution consisting of 130 sentences in CoNNL format. 
 The dataset has been manually annotated to include coreference mentions of masculine, feminine, and inanimate entities. 
 Additional entries have been included to expand the variety of coreference cases present in the dataset.
 
