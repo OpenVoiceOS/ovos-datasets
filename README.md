@@ -4,9 +4,14 @@
 All datasets released under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license. 
 
 * [utterance_tags_v0.1.csv](#utterance-tags-v01csv)
-    + [Description](#description)
-    + [LabelS](#labels)
-    + [Samples](#samples)
+  + [Description](#description)
+  + [Labels](#labels)
+  + [Samples](#samples)
+* [corefiob_v0.1.txt](#corefiob-v01txt)
+  + [Description](#description-1)
+  + [Labels](#labels-1)
+  + [Samples](#samples-1)
+
 
 ## utterance_tags_v0.1.csv
 
@@ -40,15 +45,6 @@ COMMAND:ACTION,Bring me a glass of water
 COMMAND:ACTION,Brush your teeth
 COMMAND:ACTION,Call John
 COMMAND:DENIAL,Don't eat that, it's spoiled
-COMMAND:DENIAL,Don't leave the stove on
-COMMAND:DENIAL,Don't smoke in this area
-COMMAND:DENIAL,Don't speak to strangers
-COMMAND:DENIAL,Don't touch that
-COMMAND:DENIAL,Don't use your phone while driving
-COMMAND:DENIAL,Don't walk on the grass
-COMMAND:DENIAL,It is forbidden to run inside the house
-COMMAND:DENIAL,It is not permitted to take pictures in this museum
-COMMAND:DENIAL,It is prohibited to litter
 COMMAND:DENIAL,It is prohibited to smoke in this building
 COMMAND:DENIAL,Smoking is strictly prohibited in this area
 COMMAND:DENIAL,Stay away from the edge
@@ -80,4 +76,64 @@ SENTENCE:SOCIAL,Good morning
 SENTENCE:STATEMENT,The sky is so blue today
 SENTENCE:STATEMENT,The sun is a star that is located at the center of our solar system
 SENTENCE:STATEMENT,The sun rises in the east and sets in the west
+```
+
+
+## corefiob_v0.1.txt
+
+
+### Description
+
+This is a dataset for coreference resolution consisting of 93 sentences in CoNNL format. 
+The dataset has been manually annotated to include coreference mentions of masculine, feminine, and inanimate entities. 
+Additional entries have been included to expand the variety of coreference cases present in the dataset.
+
+Each line of the dataset represents a token and its corresponding part-of-speech tag and entity tag. 
+The entity tags denote the start and end of an entity mention, and whether it is a masculine, feminine, or inanimate entity, and if it is the coreference mention, using the BIO scheme.
+
+The dataset is suitable for training feature extractors for coreference resolution models.
+
+### Labels
+
+The annotations follow the following scheme:
+
+- B-ENTITY-MALE: Beginning of a male entity mention
+- I-ENTITY-MALE: Inside of a male entity mention
+- B-ENTITY-FEMALE: Beginning of a female entity mention
+- I-ENTITY-FEMALE: Inside of a female entity mention
+- B-ENTITY-INANIMATE: Beginning of an inanimate entity mention
+- I-ENTITY-INANIMATE: Inside of an inanimate entity mention
+- B-ENTITY-PLURAL: Beginning of a plural entity mention
+- I-ENTITY-PLURAL: Inside of a plural entity mention
+- B-COREF-MALE: Beginning of a coreference mention of a male entity
+- I-COREF-MALE: Inside of a coreference mention of a male entity
+- B-COREF-FEMALE: Beginning of a coreference mention of a female entity
+- I-COREF-FEMALE: Inside of a coreference mention of a female entity
+- B-COREF-INANIMATE: Beginning of a coreference mention of an inanimate entity
+- I-COREF-INANIMATE: Inside of a coreference mention of an inanimate entity
+- B-COREF-PLURAL: Beginning of a coreference mention of a plural entity
+- I-COREF-PLURAL: Inside of a coreference mention of a plural entity
+
+### Samples
+
+```
+Korgoth	PROPN	B-ENTITY-MALE
+of	ADP	I-ENTITY-MALE
+Barbaria	PROPN	I-ENTITY-MALE
+is	AUX	O
+here	ADV	O
+,	PUNCT	O
+He	PRON	B-COREF-MALE
+is	AUX	O
+a	DET	O
+savage	NOUN	O
+!	PUNCT	O
+
+Here	ADV	O
+is	AUX	O
+the	DET	B-ENTITY-INANIMATE
+book	NOUN	I-ENTITY-INANIMATE
+now	ADV	O
+take	VERB	O
+it	PRON	B-COREF-INANIMATE
 ```
