@@ -84,7 +84,7 @@ SENTENCE:STATEMENT,The sun rises in the east and sets in the west
 
 ### Description
 
-This is a dataset for coreference resolution consisting of 168 sentences in CoNNL format. 
+This is a dataset for coreference resolution consisting of 184 sentences in CoNNL format. 
 The dataset has been manually annotated to include coreference mentions of masculine, feminine, and inanimate entities. 
 Additional entries have been included to expand the variety of coreference cases present in the dataset.
 
@@ -101,16 +101,16 @@ The annotations follow the following scheme:
 - I-ENTITY-MALE: Inside of a male entity mention
 - B-ENTITY-FEMALE: Beginning of a female entity mention
 - I-ENTITY-FEMALE: Inside of a female entity mention
-- B-ENTITY-INANIMATE: Beginning of an inanimate entity mention
-- I-ENTITY-INANIMATE: Inside of an inanimate entity mention
+- B-ENTITY-INANIMATE: Beginning of a non-human entity mention
+- I-ENTITY-INANIMATE: Inside of a non-human entity mention
 - B-ENTITY-PLURAL: Beginning of a plural entity mention
 - I-ENTITY-PLURAL: Inside of a plural entity mention
 - B-COREF-MALE: Beginning of a coreference mention of a male entity
 - I-COREF-MALE: Inside of a coreference mention of a male entity
 - B-COREF-FEMALE: Beginning of a coreference mention of a female entity
 - I-COREF-FEMALE: Inside of a coreference mention of a female entity
-- B-COREF-INANIMATE: Beginning of a coreference mention of an inanimate entity
-- I-COREF-INANIMATE: Inside of a coreference mention of an inanimate entity
+- B-COREF-INANIMATE: Beginning of a coreference mention of a non-human entity
+- I-COREF-INANIMATE: Inside of a coreference mention of a non-human entity
 - B-COREF-PLURAL: Beginning of a coreference mention of a plural entity
 - I-COREF-PLURAL: Inside of a coreference mention of a plural entity
 
