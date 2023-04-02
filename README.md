@@ -11,7 +11,11 @@ All datasets released under the Creative Commons Attribution-ShareAlike 4.0 Inte
   + [Description](#description-1)
   + [Labels](#labels-1)
   + [Samples](#samples-1)
-
+* [world_names_v0.2.csv](#world-names-v02csv)
+  + [Description](#description)
+  + [Labels](#labels)
+  + [Samples](#samples)
+  
 
 ## utterance_tags_v0.1.csv
 
@@ -136,4 +140,42 @@ book	NOUN	I-ENTITY-INANIMATE
 now	ADV	O
 take	VERB	O
 it	PRON	B-COREF-INANIMATE
+```
+
+## world_names_v0.2.csv
+
+### Description
+
+This dataset contains a list of 1664 names with their respective gender and language. The dataset was created for educational and research purposes and can be used for various tasks such as gender classification, language detection, and name analysis.
+
+### Labels
+
+The data is provided in a CSV (comma-separated values) format, with the following columns:
+
+- label: The gender of the name, can be either male or female
+- name: The name itself
+- lang: The language of the name in full BCP47 format, such as en-US for American English or zh-CN for Simplified Chinese.
+
+### Samples
+
+```
+male,Eugen,ro-RO
+female,Ingrid,sv-FI
+male,Igor,hr-BA
+female,Cecilia,es-ES
+female,Susanne,de-DE
+male,Yuriy,uk-UA
+male,Carlos,es-ES
+male,Lluís,ca-ES
+male,Franklin,en-US
+female,Kumiko,ja-JP
+female,Yun-Xia,zh-CN
+male,Muhammad,ar-EG
+male,Ionut,ro-RO
+male,Vicente,pt-BR
+female,Gizem,tr-TR
+male,Dominic,en-GB
+male,Siu-Ming,zh-HK
+male,Olivier,fr-FR
+female,Martina,es-AR
 ```
