@@ -3,6 +3,15 @@
 
 All datasets released under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license. 
 
+* [ocp_entities_v0.csv](#ocp-entities-v0csv)
+  + [Description](#description)
+  + [Labels](#labels)
+* [ocp_media_types_v0.csv](#ocp-media-types-v0csv)
+  + [Description](#description)
+  + [Labels](#labels)
+  + [Samples](#samples)
+* [ocp_sentences_v0.csv](#ocp-sentences-v0csv)
+  + [Description](#description)
 * [utterance_tags_v0.1.csv](#utterance-tags-v01csv)
   + [Description](#description)
   + [Labels](#labels)
@@ -16,6 +25,100 @@ All datasets released under the Creative Commons Attribution-ShareAlike 4.0 Inte
   + [Labels](#labels)
   + [Samples](#samples)
   
+
+## ocp_entities_v0.csv
+
+### Description
+
+media playback related entities scraped from wikidata via SPARQL queries, more info in [OCP-dataset repo](https://github.com/NeonJarbas/OCP-dataset)
+
+### Labels
+
+```python
+['film_genre', 'cartoon_genre', 'news_streaming_service',
+'media_type_documentary', 'media_type_adult', 'media_type_bw_movie', 'podcast_genre',
+'comic_streaming_service', 'music_genre', 'media_type_video_episodes', 'anime_genre',
+'media_type_audio', 'media_type_bts', 'media_type_silent_movie',
+'audiobook_streaming_service', 'radio_drama_genre', 'media_type_podcast',
+'radio_theatre_company', 'media_type_short_film', 'media_type_movie', 'news_provider',
+'documentary_genre', 'radio_theatre_streaming_service', 'podcast_streaming_service',
+'media_type_tv', 'comic_name', 'media_type_adult_audio', 'media_type_news',
+'media_type_music', 'media_type_cartoon', 'documentary_streaming_service',
+'cartoon_streaming_service', 'anime_streaming_service', 'media_type_hentai',
+'movie_streaming_service', 'media_type_trailer', 'shorts_streaming_service', 'video_genre',
+'porn_streaming_service', 'playback_device', 'media_type_game', 'playlist_name',
+'media_type_video', 'media_type_visual_story', 'media_type_radio_theatre',
+'media_type_audiobook', 'porn_genre', 'book_genre', 'media_type_anime', 'sound',
+'media_type_radio', 'album_name', 'country_name', 'generic_streaming_service',
+'tv_streaming_service', 'radio_drama_name', 'film_studio', 'video_streaming_service',
+'short_film_name', 'tv_channel', 'youtube_channel', 'bw_movie_name', 'audiobook_narrator',
+'radio_drama', 'radio_program_name', 'game_name', 'series_name', 'artist_name', 'tv_genre',
+'hentai_name', 'podcast_name', 'music_streaming_service', 'silent_movie_name', 'book_name',
+'gaming_console_name', 'book_author', 'record_label', 'radio_streaming_service',
+'game_genre', 'anime_name', 'documentary_name', 'cartoon_name', 'audio_genre', 'song_name',
+'movie_name', 'porn_film_name', 'comics_genre', 'radio_program', 'porn_site',
+'pornstar_name']
+```
+
+
+## ocp_media_types_v0.csv
+
+### Description
+
+semi-synthetic dataset to classify OCP media types, generated via sentence templates created with LLMs + entities from dataset above
+
+more info in [OCP-dataset repo](https://github.com/NeonJarbas/OCP-dataset)
+
+### Labels
+
+```
+AUDIO = 1  # things like ambient noises
+MUSIC = 2
+VIDEO = 3  # eg, youtube videos
+AUDIOBOOK = 4
+GAME = 5  # because it shares the verb "play", mostly for disambguation
+PODCAST = 6
+RADIO = 7  # live radio
+NEWS = 8  # news reports
+TV = 9  # live tv stream
+MOVIE = 10
+TRAILER = 11
+AUDIO_DESCRIPTION = 12  # narrated movie for the blind
+VISUAL_STORY = 13  # things like animated comic books
+BEHIND_THE_SCENES = 14
+DOCUMENTARY = 15
+RADIO_THEATRE = 16
+SHORT_FILM = 17  # typically movies under 45 min
+SILENT_MOVIE = 18
+VIDEO_EPISODES = 19  # tv series etc
+BLACK_WHITE_MOVIE = 20
+CARTOON = 21
+ANIME = 22
+ADULT = 69  # for content filtering
+HENTAI = 70  # for content filtering
+ADULT_AUDIO = 71  # for content filtering
+```
+
+### Samples
+
+```
+music, What's the latest on christian hip hop 
+radio_drama, find me a fascinating radio theatre program on RSS feed 
+silent_movie, Can you find silent films from Andorra on Youtube Movies 
+ad, Describe Ya z toboyu with audio for the visually impaired on Moviechi
+cartoon, watch a cartoon on TV
+documentary, documentary on ancient mysteries
+hentai, Start anime for mature audiences - let's see what's out there
+```
+
+## ocp_sentences_v0.csv
+
+### Description
+
+sentences tagged as media playback related or not, samples tagged as `OCP` come from `ocp_media_types_v0.csv` the others from datasets in this repository
+
+more info in [OCP-dataset repo](https://github.com/NeonJarbas/OCP-dataset)
+
 
 ## utterance_tags_v0.1.csv
 
