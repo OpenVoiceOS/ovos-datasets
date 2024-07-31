@@ -12,7 +12,7 @@ All datasets released under the Creative Commons Attribution-ShareAlike 4.0 Inte
   + [Samples](#samples)
 * [ocp_sentences_v0.csv](#ocp-sentences-v0csv)
   + [Description](#description)
-* [utterance_tags_v0.1.csv](#utterance-tags-v01csv)
+* [utterance_tags_v0.2.csv](#utterance-tags-v02csv)
   + [Description](#description)
   + [Labels](#labels)
   + [Samples](#samples)
@@ -120,12 +120,14 @@ sentences tagged as media playback related or not, samples tagged as `OCP` come 
 more info in [OCP-dataset repo](https://github.com/NeonJarbas/OCP-dataset)
 
 
-## utterance_tags_v0.1.csv
+## utterance_tags_v0.2.csv
 
 ### Description
 
-This dataset contains 1187 labeled utterances that fall into three categories: COMMAND, QUESTION, and SENTENCE. 
+dataset v0.1 contained 1187 labeled utterances that fall into three categories: COMMAND, QUESTION, and SENTENCE. 
 Each label has sub-labels that describe the type of utterance, such as ACTION, DENIAL, QUERY, and REQUEST. 
+
+v0.2 extended number of samples to ~5500 via ChatGPT
 
 The purpose of this dataset is to provide labeled examples of various types of commands, questions, and sentences that can be used for training natural language processing (NLP) models.
 
